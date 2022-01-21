@@ -1,4 +1,9 @@
+import com.google.common.base.Splitter;
 import com.google.common.math.DoubleMath;
+import com.google.common.math.IntMath;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GuavaTester {
     public static void main(String[] args) {
@@ -22,7 +27,7 @@ public class GuavaTester {
 
         String nameTag = "Hello,,, ,My, Name,,, is,,, Joe!";
         List<String> cutUpTag;
-        Splitter.on(",").trimResults().omitEmptyStrings().splitToList(nameTag);
+        cutUpTag=Splitter.on(",").trimResults().omitEmptyStrings().splitToList(nameTag);
 
         System.out.println(cutUpTag.size());
 
@@ -31,4 +36,3 @@ public class GuavaTester {
         }
         }
     }
-}
